@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+ .psi-button{
+   @apply cursor-pointer flex items-center justify-center  p-6 rounded-3xl bg-psi-purple-200 text-psi-white font-bold text-xl transition-transform hover:animate-pulse hover:scale-105
+  }
+}
