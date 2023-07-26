@@ -1,37 +1,37 @@
 
 [
     {
-        "icon": "thinking.png",
+        "icon": "thinking",
         "title":"Estresse",
         "text":"Ter o controle das emoções, lidar com as raízes dos problemas e tratá-las"
     },
   
     {
-        "icon": "handshake.png",
+        "icon": "handshake",
         "title":"Traumas",
         "text":"Entender o problema e modificar os padrões mentais negativos que lhe afetam"
     },
 
     {
-        "icon": "anxiety.png",
+        "icon": "anxiety",
         "title":"Ansiedade",
         "text":"Procurar entender a si mesmo, se cobrar menos, desviar dos pensamentos negativos"
     },
 
     {
-        "icon": "health.png",
+        "icon": "health",
         "title":"Saúde emocional",
         "text":"Controlar o que te afeta é o primeiro passo em caminho a melhorar a saúde emocional"
     },
 
     {
-        "icon": "depression.png",
+        "icon": "depression",
         "title":"Depressão",
         "text":"Falar do que te afeta, expressar o que sempre quis, te trará um novo jeito de enxergar a vida"
     },
     
     {
-        "icon": "relationship.png",
+        "icon": "relationship",
         "title":"Relacionamentos",
         "text":"Confiar e se conectar não apenas com os outros, mas com si, é a base para se relacionar"
     }
