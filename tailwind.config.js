@@ -22,8 +22,15 @@ export default {
       },
 
       backgroundImage:{
-        'desktopBanner': "url('assets/images/banner-desktop.jpg')"
+        'whiteBackground': "url('assets/images/white-background.svg')"
       },
+
+      gridTemplateColumns: {
+        'autoCard':'repeat(auto-fill, minmax(25rem,1fr))'
+      },
+  
+
+    
 
       
     },

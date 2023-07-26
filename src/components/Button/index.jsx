@@ -1,8 +1,13 @@
-const Button = ({children, outline}) => {
+const Button = ({children, outline=false, fullWidth=false}) => {
   return(
-    <button className={`psi-button ${!!outline &&  'bg-transparent border-2 border-black' }`}>
+      <button className={`
+        psi-button
+        ${!!outline? 'bg-transparent border-2 border-black':''}
+        ${!!fullWidth? 'w-full' : 'w-fit'}
+      `}>
       {children}
-    </button>
+      </button>
+    
   )
 }
 
