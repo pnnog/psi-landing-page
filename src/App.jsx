@@ -85,7 +85,7 @@ function App() {
           </div>
 
           <div className="m-4 flex flex-col gap-2">
-            <label htmlFor="" >Nome</label>
+            <label htmlFor="">Nome</label>
             <input type="text"  placeholder="Digite seu nome" className="p-4"  />
           </div>
 
