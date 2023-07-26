@@ -1,10 +1,9 @@
 
 const Card = ({icon, title, text}) =>{
-    const getURL = new URL(import.meta.url)
-   
+
     return (
         <>
-            <img src={`assets/icons/${icon}`} alt={title}className="w-[64px] mb-4 mx-auto" />
+            <img src={`assets/${icon}`} alt={title}className="w-[64px] mb-4 mx-auto" />
 
             <h4 className="text-psi-purple-300 mb-10 text-center uppercase relative psi-cosmetic font-bold transition-all cursor-default">{title}</h4>
 
