@@ -1,12 +1,15 @@
-const Title = ({color ='text-psi-purple-300', children, size ='normal', align}) =>{
+const Title = ({color ='purple', children, size ='normal', center, end}) =>{
     return (
     
         <h1 className = {`
-                ${color}  
-                ${size === 'normal'? 'title' :''}
+        
+                ${color=='purple'&& 'text-psi-purple-300'}  
+                ${color=='white'&& 'text-psi-white'}  
+                ${size === 'normal'? 'psi-title' :''}
                 ${size === 'medium'? 'title-md' :''}
                 ${size === 'large'? 'title-lg' :''}
-                ${!!align && align}
+                ${!!center && 'text-center'}
+                ${!!end && 'text-end'}
         `}>
             {children}
         </h1>

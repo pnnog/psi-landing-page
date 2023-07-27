@@ -1,5 +1,13 @@
 const Paragraph = ({color ='black', children, space='mb-4'}) =>{
-    return <p className={`text-base lg:text-lg text-psi-${color} font-semibold text-justify ${space}`}> {children}</p>
+    return (
+    <p className ={`
+        text-base lg:text-lg
+        font-semibold text-justify
+        ${color=='black'&& 'text-psi-black'}
+        ${color=='white'&& 'text-psi-white'}
+        ${space}`}>
+            {children}
+    </p>)
 }
 
 export default Paragraph

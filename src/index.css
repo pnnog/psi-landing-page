@@ -5,18 +5,20 @@
 
 @layer components{
  .psi-button{
-   @apply cursor-pointer flex items-center justify-center  p-6 rounded-3xl bg-psi-purple-200 text-psi-white font-bold text-lg lg:text-xl transition-transform hover:animate-pulse hover:scale-105
+   @apply cursor-pointer flex items-center justify-center  mx-auto md:mx-0 p-6 rounded-3xl bg-psi-purple-200 text-psi-white font-bold text-lg lg:text-xl transition-transform hover:animate-pulse hover:scale-105
   }
   
-  .title{
-    @apply  text-3xl lg:text-4xl mb-6 lg:mb-12 font-medium
+  .psi-title{
+    @apply  text-3xl lg:text-4xl mb-6 lg:mb-10 font-medium
   }
 
   .title-md{
-    @apply  text-3xl lg:text-5xl mb-12 lg:mb-24 font-bold
+    @apply text-3xl lg:text-4xl mb-6 lg:mb-10 font-bold 
   }
 
   .title-lg{
-    @apply  text-3xl lg:text-6xl mb-12 lg:mb-24 font-bold
+    @apply text-3xl lg:text-4xl mb-8 lg:mb-10 font-bold
   }
+
+  
 }

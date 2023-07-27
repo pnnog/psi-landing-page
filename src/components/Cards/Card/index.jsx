@@ -19,9 +19,6 @@ const getIcon = (name)=>{
     return icon[name]
 }
 
-
-
-
 const Card = ({icon, title, text}) =>{
    
 
