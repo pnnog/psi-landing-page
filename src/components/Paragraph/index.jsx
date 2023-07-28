@@ -1,12 +1,7 @@
-const Paragraph = ({color ='black', children, space='mb-4'}) =>{
+const Paragraph = ({color ='text-psi-black', children, space='mb-0', className}) =>{
     return (
-    <p className ={`
-        text-base lg:text-md
-        font-semibold text-justify
-        ${color=='black'&& 'text-psi-black'}
-        ${color=='white'&& 'text-psi-white'}
-        ${space}`}>
-            {children}
+    <p className ={`psi-paragraph ${color} ${space} ${className||''} `}>
+        {children}
     </p>)
 }
 

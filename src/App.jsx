@@ -4,10 +4,8 @@ import SectionModel from "components/SectionModel"
 import Title from "components/Tittle"
 import Cards from "components/Cards"
 import SectionImage from "components/SectionImage"
-
 import aline from 'assets/images/aline.png'
-import Input from "components/Form/Input"
-import TextArea from "components/Form/TextArea"
+import Form from "components/Form"
 
 
 function App() {
@@ -17,7 +15,7 @@ function App() {
     <>
       <Banner/>
 
-      <SectionModel id='porque-fazer-terapia' color="gray">
+      <SectionModel id='porque-fazer-terapia' background="bg-psi-gray">
         <Title  size="medium"> Por que fazer terapia?</Title>
 
         <Paragraph space='mb-8'>
@@ -33,13 +31,12 @@ function App() {
         </Paragraph>
       </SectionModel>
 
-      <SectionModel id='tipos-de-atendimento' color="blue">
-        <Title center size="large"> Tipos de atendimento</Title>
+      <SectionModel id='tipos-de-atendimento' background="bg-psi-blue">
+        <Title align='text-center' size="large"> Tipos de atendimento</Title>
         <Cards />
       </SectionModel>
       
-      <SectionModel id='sobre' color="gray">
-      {/* grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 justify-items-center items-center */}
+      <SectionModel id='sobre' background="bg-psi-gray">
         <div className="psi-grid md:grid-cols-1 lg:grid-cols-2">
           <div>
             <Title align='text-center' size="medium"> Quem é Aline?</Title>
@@ -62,20 +59,15 @@ function App() {
 
       </SectionModel>
 
-      <SectionModel  id='formulario' color="purple">
-        <Title color="white" center size="large"> Entre em contato </Title>
-
-        <form className="bg-psi-gray p-16 rounded-md max-w-3xl mx-auto min-h-[400px] ">
-          <Input placeholder='Digite seu nome'/>
-          <Input placeholder={'Celular (Whatsapp)'}/>
-          <Input placeholder={'Email'} type="email" />
-          <TextArea/>
-        </form>
+      <SectionModel nospace id='formulario'>
+        <div className="px-12 mb-8 md:mb-20"> 
+          <h2 className="psi-title text-psi-white text-center mb-8 ">O início da sua jornada</h2>
+          <Paragraph color="text-psi-white" className='text-center '> Me conta um pouco sobre você e vamos conversar</Paragraph>
+        </div>
+        <Form/>
       </SectionModel>
-
     </>
   )
-  ''
 }
 
 export default App

@@ -1,11 +1,6 @@
-const SectionModel = ({children, id, nospace, color='blue'}) =>{
+const SectionModel = ({children, id, nospace, background='bg-psi-purple-300'}) =>{
     return (
-        <section id={id} className={`
-            ${color=='blue'? 'bg-psi-blue':''}
-            ${color=='purple'? 'bg-psi-purple-300':''}
-            ${color=='gray'? 'bg-psi-gray':''}
-            ${nospace? '':'px-12'}
-            md:px-12 lg:px-24 py-14 md:py-28 min-h-[300]`}>
+        <section id={id} className={`psi-section-model ${background} ${nospace? 'px-0':'px-12'} `}>
             <div className='max-w-7xl mx-auto'>
                 {children} 
             </div>  

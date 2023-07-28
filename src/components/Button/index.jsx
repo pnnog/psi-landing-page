@@ -1,12 +1,9 @@
-const Button = ({children, outline=false, fullWidth=false}) => {
+const Button = ({children, size='md', onClick}) => {
   return(
-      <button className={`
-        psi-button
-        ${!!outline? 'bg-transparent border-2 border-black':''}
-        ${!!fullWidth? 'w-full' : 'w-fit'}
-      `}>
+      <a className={` psi-button ${size === 'lg' ? 'w-[280px] py-5 md:py-6 text-lg md:text-xl':''} ${size === 'md' ? 'w-[200px] py-4 md:py-4 text-md lg:text-lg':''}`} 
+        onClick={onClick}>
       {children}
-      </button>
+      </a>
     
   )
 }
