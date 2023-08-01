@@ -2,42 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  
+  html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    
+  }
+} 
 
 @layer components{
- .psi-button{
-   @apply flex items-center justify-center rounded-3xl bg-psi-purple-200 text-psi-white font-bold transition-transform hover:animate-pulse hover:scale-105
+
+  /*----- Banner ----- */
+  .banner{
+    @apply px-12 py-14 md:py-20 min-h-[500px] bg-psi-purple-300
   }
 
-  .psi-mb-sm{
-    @apply mb-6 lg:mb-10 
+  .banner-highlight{
+    @apply z-0 relative after:absolute after:bg-[rgba(0,0,0,.5)] after:top-0 after:left-0 after:right-0 after:bottom-0 after:-z-10 after:pointer-events-none
   }
 
-  .psi-mb-md{
-    @apply mb-6 lg:mb-10 
-  }
 
-  .psi-mb-lg{
-    @apply mb-8 lg:mb-10
-  }
 
-  .psi-title{
-    @apply text-3xl lg:text-4xl font-bold
-  }
-
-  .psi-grid{
-    @apply grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 justify-items-center items-center
-  }
+  /*----- Container ----- */
+  
+  .psi-container{
+      @apply max-w-4xl xl:max-w-5xl 2xl:max-w-7xl  mx-auto
+    }
 
   .psi-input{
     @apply p-4 h-16 w-full rounded-md outline-none border-2 focus:invalid:border-red-500 focus:border-green-500 focus:bg-gray-100 placeholder:text-gray-500 
   }
 
-  .psi-section-model{
-    @apply md:px-12 lg:px-24 py-14 md:py-20 min-h-[300]
+ 
+
+  /*----- Menu Mobile ----- */
+
+  .menu-mobile{
+    @apply fixed top-0 left-0 right-0 bottom-0 z-20 flex flex-col gap-36 transition-all duration-500 bg-psi-white px-12 py-5  
   }
 
-  .psi-paragraph{
-    @apply text-base lg:text-base font-semibold text-justify
+   /*----- Menu Link ----- */
+
+  .menu-link{
+    @apply relative text-psi-black cursor-pointer after:absolute w-fit text-xl 2md:text-base
+  }
+  .menu-link-highlight{
+    @apply bg-purple-300 px-3 py-4 rounded-full hover:bg-psi-purple-200 hover:text-psi-white transition-all 
+  }
+  .menu-link-border{
+    @apply after:absolute after:h-[2px] after:bg-psi-purple-100 after:rounded-full after:transition-all after:-bottom-1 after:left-2/4 after:w-0  hover:after:w-full hover:after:left-0 ml-3 2md:ml-0 
+  }
+
+  .title-cosmetic{
+    @apply after:absolute after:-bottom-1 after:left-0 after:w-[20px] after:h-[2px] after:bg-psi-purple-100
   }
   
+
+   /*----- Buttons ----- */
+
+  .button{
+    @apply cursor-pointer flex items-center text-center justify-center rounded-3xl bg-psi-purple-200 text-psi-white font-bold transition-transform hover:animate-pulse hover:scale-105
+  }
+
+  .button-large {
+    @apply w-[280px] py-5 md:py-6 text-lg md:text-xl 
+  }
+
+  .button-medium {
+    @apply w-[200px] py-4 md:py-4 text-base lg:text-lg
+  }
+
 }
+
+

@@ -21,18 +21,13 @@ export default {
         'sans':['Manrope', ...defaultTheme.fontFamily.sans]
       },
 
-      backgroundImage:{
-        'whiteBackground': "url('assets/images/white-background.svg')"
-      },
-
       gridTemplateColumns: {
         'autoCard':'repeat(auto-fill, minmax(25rem,1fr))'
       },
-  
 
-    
-
-      
+      screens:{
+        '2md':'920px'
+      }
     },
   },
   plugins: [],

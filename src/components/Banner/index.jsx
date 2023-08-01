@@ -1,22 +1,18 @@
-import bannerImage from "assets/images/banner.svg"
-import Button from "components/Button"
-import SectionImage from "components/SectionImage"
-import SectionModel from "components/SectionModel"
-import Title from "components/Tittle"
+import { button, paragraph, title } from "components/UI"
 
 const Banner  = () =>{
-  return(
-
-      <SectionModel id='banner' background="bg-psi-blue">
-        <div className="psi-grid">
-          <div id="banner-texts">
-              <Title size="large">Terapia online ao seu alcance  </Title>
-              <p className=' text-base lg:text-xl text-psi-black font-semibold text-justify mb-12 '> Agora você pode conversar com um psicólogo online a qualquer hora com sigilo e segurança através da nossa plataforma de telepsicologia </p>
-              <Button size='lg'>Agende já sua consulta</Button>
-          </div>
-            <SectionImage src={bannerImage} alt='Imagem do Banner'/>
-            </div>
-      </SectionModel>
+  return (
+    <div id="banner" className="banner banner-highlight">
+      <div className="psi-container mt-[65px] flex flex-col gap-12 md:gap-16">
+        <div>
+          <h1 className={title({color:'white'})}> Terapia online ao seu alcance </h1>
+          <p className={paragraph({size:'lg',color:'white'})}>
+             Agora você pode conversar com um psicólogo online a qualquer hora com sigilo e segurança através da nossa plataforma de telepsicologia 
+          </p>
+        </div>
+        <a className = {button({size:'large'})}href="#formulario">Agende já sua consulta</a>
+      </div> 
+    </div>
   )
 }
 
