@@ -21,7 +21,6 @@ export const grid = tv ({
       section:'md:grid-cols-2 gap-16 md:gap-24 justify-items-center items-center',
       cards:'sm:grid-cols-2 lg:grid-cols-3 gap-16 sm:gap-32 px-12 sm:px-0  py-4 lg:py-8'
     }
-    
   }
 })
 

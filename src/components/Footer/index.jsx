@@ -16,11 +16,11 @@ const Footer = () =>{
 					<LinkedinIcon size={20} />
 					</a>
 
-					<a href='https://www.google.com.br' target='_blank' className='text-psi-purple-300 hover:bg-gray-100 p-3 shadow-md rounded-full border-2  transition-colors cursor-pointer border-gray-300'>
+					<a href='https://wa.me/5571991521058?text=Ol%C3%A1%2C+Aline%21+Gostaria+de+conversar+com+voc%C3%AA%21' target='_blank' className='text-psi-purple-300 hover:bg-gray-100 p-3 shadow-md rounded-full border-2  transition-colors cursor-pointer border-gray-300'>
 					<WhatsappIcon size={20} />
 					</a>
 
-					<a href='https://www.google.com.br' target='_blank' className='text-psi-purple-300 hover:bg-gray-100 p-3 shadow-md rounded-full border-2  transition-colors cursor-pointer border-gray-300'>
+					<a href='https://www.instagram.com/alineleite.psi' target='_blank' className='text-psi-purple-300 hover:bg-gray-100 p-3 shadow-md rounded-full border-2  transition-colors cursor-pointer border-gray-300'>
 					<InstagramIcon size={20} />
 					</a>
 				</nav>

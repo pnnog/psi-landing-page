@@ -23,7 +23,7 @@ const section = tv({
 
 const SectionModel = ({children, id, space, background}) =>{
     return (
-        <section  id={id} className={`${section({background, space})}  `}>
+        <section  id={id} className={section({background, space})}>
             <div className='psi-container z-20 '>
                 {children} 
             </div>  

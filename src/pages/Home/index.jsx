@@ -8,6 +8,7 @@ import Footer from "components/Footer"
 import Navbar from "components/Navbar"
 import Testimonials from "components/Testimonials"
 import { grid, paragraph, title } from "components/UI"
+import ScrollToTop from "components/ScrollToTop"
 
 
 const Home = () =>{
@@ -17,7 +18,6 @@ const Home = () =>{
       <Navbar/>
       <Banner />
       <SectionModel id='porque-fazer-terapia' background='gray'>
-
         <div className={grid({type:'section'})}>
           <div>
             <h2 className={title()}> Por que fazer terapia?</h2>
@@ -37,14 +37,11 @@ const Home = () =>{
             </div>
           </div>
 
-          <div className="max-w-[400px] w-full shadow-lg rounded-full transition-all hover:scale-105">
+          <div className="max-w-[400px] w-full shadow-lg rounded-full transition-all hover:scale-105 md:justify-self-end">
             <img src={woman} alt="Woman" className="rounded-full " />
           </div>
 
         </div>
-
-        
-        
       </SectionModel>
 
       <SectionModel id='tipos-de-atendimento' background="blue">
@@ -67,7 +64,7 @@ const Home = () =>{
             </div>
           </div>
   
-          <div className="max-w-[400px] w-full shadow-lg rounded-full transition-all hover:scale-105">
+          <div className="max-w-[400px] w-full shadow-lg rounded-full transition-all hover:scale-105 md:justify-self-end">
             <img src={aline} alt="Woman" className="rounded-full " />
           </div>
 
@@ -93,6 +90,8 @@ const Home = () =>{
       </SectionModel>
 
       <Footer/>
+
+      <ScrollToTop/>
     </>
   )
 }
