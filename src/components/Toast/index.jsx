@@ -38,15 +38,14 @@ const Toast = ({type, isVisible}) =>{
   const message = messages[type]
 
   return(
-    <div className={toast({isVisible, type})}>
-
+    <div aria-hidden={!isVisible} className={toast({isVisible, type})}>
       <div>
         {message.icon}
       </div>
 
       <div className='flex-1 '>
         <h5 className="text-sm md:text-base mb-1 font-bold"> {message.title} </h5>
-        <p className="text-xs text-gray font-semibold ">{message.text}</p>
+        <p className="text-xs md:text-sm text-gray font-semibold ">{message.text}</p>
       </div>
     </div>
   )
