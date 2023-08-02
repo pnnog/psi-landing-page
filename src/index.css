@@ -8,9 +8,19 @@
     scroll-behavior: smooth;
     scroll-padding-top: 94px;
   }
+
+  body{
+    -webkit-font-smoothing:antialiased
+  }
 } 
 
 @layer components{
+
+
+  /*----- Toast ----- */
+  .psi-toast{
+    @apply fixed z-50 pointer-events-none left-2/4 -translate-x-2/4 w-[300px] md:w-[500px] p-4 rounded-lg overflow-hidden text-psi-white items-center gap-3 transition-transform flex duration-1000 -top-24
+  }
 
   /*----- Banner ----- */
   .banner{

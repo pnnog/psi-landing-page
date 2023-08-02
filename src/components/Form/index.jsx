@@ -6,14 +6,34 @@ import Input from "./Input"
 import TextArea from "./TextArea"
 import { button } from "components/UI"
 
-const Form = () => {
+const Form = ({setToastType, setToastIsVisible}) => {
+  
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  const onSend = () => window.alert('Mensagem enviada com sucesso')
-  const onFail = () => window.alert('Houve um erro. Tente novamente')
+  const onSend = () => {
+    console.log('success')
+    setToastType('success')
+    setToastIsVisible(true)
+
+    setTimeout(()=>{
+      setToastIsVisible(false)
+    }, 3000)
+  }
+  const onFail = () => {
+    console.log('fail')
+
+    setToastType('fail')
+    setToastIsVisible(true)
+
+    setTimeout(()=>{
+      setToastIsVisible(false)
+    }, 3000)
+  }
+
+
   const clearFields = () => {
     setName('')
     setPhone('')

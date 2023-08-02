@@ -9,7 +9,7 @@ const Footer = () =>{
 
 				<div className='flex gap-8 flex-col md:flex-row md:items-center md:justify-between'>
 
-				<p className="text-gray-500 text-center">Responsável técnico: Aline Leite - CRP 09/2325/S</p>
+				<p className="text-gray-500 text-center">Responsável técnico: Aline Leite - CRP 03/26769</p>
 
 				<nav className="flex gap-8 justify-center">
 					<a href='https://www.google.com.br' target='_blank' className='text-psi-purple-300 hover:bg-gray-100 p-3 shadow-md rounded-full border-2  transition-colors cursor-pointer border-gray-300'>

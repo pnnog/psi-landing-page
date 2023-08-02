@@ -9,12 +9,18 @@ import Navbar from "components/Navbar"
 import Testimonials from "components/Testimonials"
 import { grid, paragraph, title } from "components/UI"
 import ScrollToTop from "components/ScrollToTop"
+import Toast from "components/Toast"
+import { useState } from "react"
 
 
 const Home = () =>{
+  const [toastType, setToastType] = useState('success')
+  const [toastIsVisible, setToastIsVisible] = useState(false)
 
   return(
     <>
+
+      <Toast type ={toastType} isVisible={toastIsVisible}/>
       <Navbar/>
       <Banner />
       <SectionModel id='porque-fazer-terapia' background='gray'>
@@ -80,7 +86,7 @@ const Home = () =>{
           <h2 className={title({align:'center', color:'white'})}> O início da sua jornada</h2>
           <p className={paragraph({color:'white', margin:'none', align:'center'})}> Me conta um pouco sobre você e vamos conversar</p>
         </div>
-        <Form/>
+        <Form setToastType ={setToastType} setToastIsVisible={setToastIsVisible}/>
       </SectionModel>
 
       <SectionModel id='aviso' background='gray'>
