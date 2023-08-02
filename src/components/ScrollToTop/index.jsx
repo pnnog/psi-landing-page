@@ -5,7 +5,7 @@ import { tv } from 'tailwind-variants'
 
 const scrollToTop = tv({
   slots:{
-    base:'fixed p-3 border-2 border-emerald-500 shadow-xl rounded-full cursor-pointer bottom-14 right-10 md:right-20 bg-gray-600 hover:bg-psi-purple-300 hover:-translate-y-2 opacity-30 hover:opacity-100 transition-transform',
+    base:'fixed w-[46px] p-3 border-2 border-emerald-500 shadow-xl rounded-full cursor-pointer bottom-14 right-10 md:right-20 bg-gray-600 hover:bg-psi-purple-300 hover:-translate-y-2 opacity-30 hover:opacity-100 transition-transform',
 
     icon:'text-white w-full h-full'
   }
