@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useState } from "react"
 
 import sendEmail from "utils/sendEmail"
 
@@ -7,6 +7,7 @@ import TextArea from "./TextArea"
 import { button } from "components/UI"
 
 const Form = ({setToastType, setToastIsVisible}) => {
+  console.log(import.meta.env)
 
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
