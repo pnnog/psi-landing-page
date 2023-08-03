@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 import sendEmail from "utils/sendEmail"
 
@@ -7,14 +7,14 @@ import TextArea from "./TextArea"
 import { button } from "components/UI"
 
 const Form = ({setToastType, setToastIsVisible}) => {
-  
+
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
+
   const onSend = () => {
-    console.log('success')
     setToastType('success')
     setToastIsVisible(true)
 
@@ -22,9 +22,8 @@ const Form = ({setToastType, setToastIsVisible}) => {
       setToastIsVisible(false)
     }, 3000)
   }
-  const onFail = () => {
-    console.log('fail')
 
+  const onFail = () => {
     setToastType('fail')
     setToastIsVisible(true)
 
@@ -32,7 +31,6 @@ const Form = ({setToastType, setToastIsVisible}) => {
       setToastIsVisible(false)
     }, 3000)
   }
-
 
   const clearFields = () => {
     setName('')
@@ -61,10 +59,10 @@ const Form = ({setToastType, setToastIsVisible}) => {
 
   return(
     <form onSubmit={handleSubmit} className="bg-psi-gray p-12 md:rounded-md max-w-3xl mx-auto min-h-[400px flex flex-col items-center gap-1">
-      <Input placeholder='Digite seu nome' value={name} setValue={setName}/>
-      <Input placeholder={'Celular (Whatsapp)'} value={phone} setValue={setPhone}/>
+      <Input placeholder='Nome' value={name} setValue={setName}/>
+      <Input minLength={8} placeholder={'Telefone (WhatsApp)'} value={phone} setValue={setPhone} />
       <Input placeholder={'Email'} type="email" value={email} setValue={setEmail} />
-      <TextArea value={message} setValue={setMessage} />
+      <TextArea value={message} setValue={setMessage} minLength={3}/>
       <button type='submit' className={button({size:'medium'})}> Enviar</button>
     </form>
     )

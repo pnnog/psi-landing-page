@@ -1,20 +1,21 @@
 import emailJs from '@emailjs/browser'
+import { getEnv } from './env'
 
 const sendEmail = async (data) =>{
-  const tempĺateParams = {
+  const tempĺatePrams = {
     from_name:data.name,
     message:data.message,
     email:data.email,
     phone:data.phone
   }
 
-  // const SERVICE_ID = 'service_zfbn1pq'
-  const SERVICE_ID_FAIL = 'service_zfbn1p'
-  const TEMPLATE_ID = 'template_jiqejbs'
-  const PUBLIC_KEY = 'I81yQ5EHazrH2NEad'
-
   try{
-    const response = await emailJs.send(SERVICE_ID_FAIL, TEMPLATE_ID, tempĺateParams, PUBLIC_KEY)
+
+    const serviceID = getEnv('serviceID')
+    const templateID = getEnv('templateID')
+    const publicKey = getEnv('publicKey')
+    
+    const response = await emailJs.send(serviceID, templateID, tempĺatePrams, publicKey)
     return 'ok'
   }
 

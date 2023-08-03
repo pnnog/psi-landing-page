@@ -14,6 +14,7 @@ import { useState } from "react"
 
 
 const Home = () =>{
+
   const [toastType, setToastType] = useState('success')
   const [toastIsVisible, setToastIsVisible] = useState(false)
 

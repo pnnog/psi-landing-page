@@ -1,7 +1,7 @@
-const Input = ({type='text', placeholder, value, setValue}) =>{
+const Input = ({type='text', placeholder, value, setValue,ref,  ...props}) =>{
 
     return (
-        <input type={type} required={true}  placeholder={placeholder}  className="psi-input" value={value} onChange={(e)=> setValue(e.target.value)}/>
+        <input {...props}  type={type} required={true}  placeholder={placeholder}  className="psi-input" value={value} onChange={(e)=> setValue(e.target.value) }/>
     )
 }
 
