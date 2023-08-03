@@ -1,6 +1,3 @@
-https://psi-landing-page.vercel.app/
-
-
 ## Landing page para psicóloga
 
 Muitas pessoas quando procuram terapia não estão interessadas em passar por toda a burocracia de interagir com empresas e buscam na internet terapeutas autônomos. No entanto, pesquise agora mesmo no Google e irá descobrir que a Web carece de bons sites para os mesmos e esta landing page foi feita para aproveitar esta fatia do mercado.
