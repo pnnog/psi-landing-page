@@ -13,11 +13,12 @@ Muitas pessoas quando procuram terapia não estão interessadas em passar por to
 # :white_check_mark: Tecnologias utilizadas
 
 - React js
+- Context Api
 - Vite
 - Tailwind CSS
 - Tailwind variants
 - EmailJs
-  
+
 # :open_file_folder: Acesso ao projeto
 Você pode acessar o código fonte do projeto original ou baixá-lo
 
@@ -29,6 +30,5 @@ Você pode acessar o código fonte do projeto original ou baixá-lo
 - Rode a aplicação com `yarn dev`
 
 # :globe_with_meridians: URL do projeto em produção
-A pedido do cliente, os emails estão bloqueados temporariamente e por isto a notificação que você irá receber em tela ao se cadastrar será de erro.
 
 https://psi-landing-page.vercel.app/
