@@ -1,22 +1,23 @@
+import { useToastEmailContext } from 'common/context/ToastEmail'
 import {AiOutlineCheckCircle as CheckIcon} from 'react-icons/ai'
 import {MdErrorOutline as ErrorIcon} from 'react-icons/md'
 import { tv } from 'tailwind-variants'
-
 
 const toast =  tv({
   base:'psi-toast',
 
   variants:{
-    isVisible:{
+    visible:{
       true:'translate-y-28',
     },
 
-    type:{
+    status:{
       success:'bg-emerald-400',
       fail:'bg-red-500 '
     }
   }
 })
+
 
 const messages = {
   success:{
@@ -29,16 +30,18 @@ const messages = {
     title:'Parece que houve um problema',
     text:'Tente novamente, por favor.',
     icon: <ErrorIcon size={24} />
-
   }
 }
 
 
-const Toast = ({type, isVisible}) =>{
-  const message = messages[type]
+const Toast = () =>{
+  const {toast: toastInfo } = useToastEmailContext()
+  const {status, visible} = toastInfo
+
+  const message = messages[status || 'fail']
 
   return(
-    <div aria-hidden={!isVisible} className={toast({isVisible, type})}>
+    <div aria-hidden={!visible} className={toast({visible, status})}>
       <div>
         {message.icon}
       </div>
