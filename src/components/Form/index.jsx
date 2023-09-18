@@ -5,18 +5,21 @@ import { useToastEmailContext } from "common/context/ToastEmail"
 
 const Form = () => {
 
-  const {sendEmailToClient} = useToastEmailContext()
+  const {trySendEmailToClient} = useToastEmailContext()
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) =>{
     e.preventDefault()
-
     const data={
       name: e.target.elements.name.value,
       phone: e.target.elements.phone.value,
       email: e.target.elements.email.value,
       message: e.target.elements.message.value
     }
-    sendEmailToClient(data)
+
+    await trySendEmailToClient(data)
+    const inputs = document.querySelectorAll('input')
+    document.querySelector('textArea').value=''
+    inputs.forEach(input=> input.value='')
   }
 
   return(

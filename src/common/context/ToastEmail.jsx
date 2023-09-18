@@ -19,10 +19,19 @@ export const useToastEmailContext = () =>{
   const {toast, setToast} = useContext(ToastEmailContext)
 
 
-  const sendEmailToClient = (data) =>{
-    sendEmail(data)
-      .then((r)=> setToast({status: 'success', visible:true}))
-      .catch((e)=> setToast({status:'fail', visible:true}))
+  const trySendEmailToClient = async (data) =>{
+
+    try{
+      await sendEmail(data)
+      setToast({status: 'success', visible:true})
+    }
+    catch{
+      setToast({status:'fail', visible:true})
+    }
+
+    finally{
+      return true
+    }
   }
 
 
@@ -36,7 +45,7 @@ export const useToastEmailContext = () =>{
   return{
     toast,
     setToast,
-    sendEmailToClient
+    trySendEmailToClient
   }
 
 }
