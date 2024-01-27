@@ -1,11 +1,11 @@
-import Logo from "./Logo"
-import MenuLink from "./MenuLink"
-import {AiOutlineMenu as OpenMenuIcon} from 'react-icons/ai'
+import Logo from './Logo';
+import MenuLink from './MenuLink';
+import {AiOutlineMenu as OpenMenuIcon} from 'react-icons/ai';
 
 
 const Nav = ({setIsOpen}) =>{
   return (
-    <nav className={`bg-psi-white opacity-90 fixed right-0 left-0 z-10 px-12 py-3 `}>
+    <nav className={'bg-psi-white opacity-90 fixed right-0 left-0 z-10 px-12 py-3 '}>
       <div className='psi-container flex items-center justify-between gap-8'>
   
         <a className="w-fit" href="#banner">
@@ -23,7 +23,7 @@ const Nav = ({setIsOpen}) =>{
         <OpenMenuIcon size={25} className='text-psi-black cursor-pointer 2md:hidden' onClick={()=> setIsOpen(true)}/>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

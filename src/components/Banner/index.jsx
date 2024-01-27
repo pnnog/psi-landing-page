@@ -1,5 +1,5 @@
-import {  paragraph, title } from "components/UI"
-import { buttonStyles } from "components/UI/Button"
+import {  paragraph, title } from 'components/UI';
+import { buttonStyles } from 'components/UI/Button';
 
 const Banner  = () =>{
   return (
@@ -7,7 +7,7 @@ const Banner  = () =>{
       <div className="psi-container mt-[94px]">
         <div className="mb-12 md:mb-16">
           <h1 className={title({color:'white'})}> Terapia online ao seu alcance </h1>
-          <p className={paragraph({size:'lg',color:'white'})}>
+          <p className={paragraph({size:'lg', color:'white'})}>
              Agora você pode conversar com um psicólogo online a qualquer hora com sigilo e segurança através da nossa plataforma de telepsicologia 
           </p>
         </div>
@@ -17,7 +17,7 @@ const Banner  = () =>{
 
       </div> 
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
